@@ -52,7 +52,7 @@ Test = sc.transform(Test)
 
 # training the model
 from sklearn.svm import SVC
-classifier = SVC(kernel = 'rbf', random_state = 0)
+classifier = SVC(kernel = 'rbf', gamma=0.1, C=1)
 classifier.fit(X_train, y_train)
 
 # predicting test set results (train.csv)
